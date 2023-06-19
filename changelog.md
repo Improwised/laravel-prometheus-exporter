@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.2.0 - 2023-06-19
+
+* Enable Laravel 10 compatability
+* Do not try to connect to Redis during service register
+* Enable Laravel 9 compatability
+* Replace jimdo/prometheus_client_php with promphp/prometheus_client_php
+
 ## 1.0.5 - 2020-03-16
 
 * Update call to array_get helper to use the Illuminate\Support\Arr class
