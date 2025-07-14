@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.3/phpunit.xsd"
+         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/10.5/phpunit.xsd"
          backupGlobals="false"
-         backupStaticAttributes="false"
          bootstrap="./vendor/autoload.php"
          colors="true"
-         convertErrorsToExceptions="true"
-         convertNoticesToExceptions="true"
-         convertWarningsToExceptions="true"
+         displayDetailsOnTestsThatTriggerDeprecations="true"
+         displayDetailsOnPhpunitDeprecations="true"
          processIsolation="false"
-         stopOnFailure="false"
-         verbose="true">
-    <coverage>
+         stopOnFailure="false">
+    <source>
         <include>
-            <directory suffix=".php">./src/</directory>
+            <directory>./src</directory>
         </include>
+    </source>
+    <coverage>
         <report>
             <clover outputFile="coverage.xml"/>
             <html outputDirectory="coverage"/>
@@ -23,8 +22,7 @@
     </coverage>
     <testsuites>
         <testsuite name="laravel-prometheus-exporter/tests">
-            <directory suffix=".php">./tests/</directory>
+            <directory>./tests</directory>
         </testsuite>
     </testsuites>
-    <logging/>
 </phpunit>
